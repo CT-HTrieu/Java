@@ -1,4 +1,4 @@
-package tuan2;
+package tuan3;
 
 import java.util.Scanner;
 
@@ -7,6 +7,27 @@ class HOCSINH {
     private String maSo;
     private String hoTen;
     private float dtb;
+
+    public HOCSINH() {
+        this.maSo = "";
+        this.hoTen = "";
+        this.dtb = 0;
+
+    }
+
+    public HOCSINH(String maSo, String hoTen, float dtb) {
+        this.maSo = maSo;
+        this.hoTen = hoTen;
+        this.dtb = dtb;
+
+    }
+
+    public HOCSINH(HOCSINH hs) {
+        this.maSo = hs.maSo;
+        this.hoTen = hs.hoTen;
+        this.dtb = hs.dtb;
+
+    }
 
     public String getMaSo() {
         return maSo;
@@ -60,15 +81,21 @@ class HOCSINH {
     }
 }
 
-public class bai1 {
+public class Bai1_tuan2 {
     public static void main(String[] args) {
         HOCSINH hs = new HOCSINH();
         hs.input();
         hs.output();
         hs.rank();
         System.out.println("Ho Ten cua HS vua nhap: " + hs.gethoTen());
-        String htMoi = "Nguyen Ngoc A";
-        hs.sethoTen(htMoi);
-        System.out.println("Ho ten cus HS sau khi sua: " + hs.gethoTen());
+        String htMoi = "Nguyen Van A";
+        String newMaSo = "113";
+        float dtb = 10;
+        HOCSINH hs1 = new HOCSINH(htMoi, newMaSo, dtb);
+        hs1.output();
+        hs1.rank();
+        HOCSINH hs2 = new HOCSINH(hs1);
+        hs2.output();
+        hs2.rank();
     }
 }

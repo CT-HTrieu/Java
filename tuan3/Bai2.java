@@ -84,7 +84,7 @@ class PhanSo {
     }
 
     public void show() {
-        System.out.print(this.getTu() + "/" + this.getMau());
+        System.out.println(this.getTu() + "/" + this.getMau());
     }
 }
 
@@ -95,7 +95,26 @@ public class Bai2 {
         int tu = x.nextInt();
         System.out.print("Nhap mau so: ");
         int mau = x.nextInt();
-        PhanSo ps = new PhanSo(tu, mau);
+        PhanSo ps1 = new PhanSo(tu, mau);
+        ps1.rutGon();
+        System.out.print("P1 co gia tri la: ");
+        ps1.show();
+        PhanSo ps2 = new PhanSo(4, 16);
+        ps2.rutGon();
+        System.out.print("P2 co gia tri la: ");
+        ps2.show();
+        PhanSo ps3 = new PhanSo(1, 9);
+        ps3.rutGon();
+        System.out.print("P3 co gia tri la: ");
+        ps3.show();
+        PhanSo ps4 = new PhanSo(ps1);
+        ps4.rutGon();
+        System.out.print("P4 co gia tri la: ");
+        ps4.show();
+        System.out.print("Cong p1 voi p3: ");
+        ps1.cong(ps3).show();
+        System.out.print("Nhan p4 voi p2: ");
+        ps4.nhan(ps2).show();
 
     }
 }

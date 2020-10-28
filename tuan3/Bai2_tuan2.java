@@ -1,4 +1,4 @@
-package tuan2;
+package tuan3;
 
 import java.util.*;
 
@@ -13,6 +13,21 @@ class Mang {
     public void setsoPt(int so) {
         soPt = so;
 
+    }
+
+    public Mang() {
+        this.soPt = 0;
+        this.array = null;
+    }
+
+    public Mang(int soPt, int a[]) {
+        this.soPt = soPt;
+        this.array = a;
+    }
+
+    public Mang(Mang a) {
+        this.array = a.array;
+        this.soPt = a.soPt;
     }
 
     public float oddNumber() {
@@ -56,7 +71,7 @@ class Mang {
     }
 }
 
-public class bai2 {
+public class Bai2_tuan2 {
     public static void main(String[] args) {
         Mang mang = new Mang();
         mang.setsoPt((int) (Math.random() * 100));
@@ -66,6 +81,15 @@ public class bai2 {
         System.out.println("Gia tri lon nhat trong mang la: " + mang.max());
         mang.sapXep();
         mang.output();
+        int[] myNum = { 20, 50, 30, 40 };
+        int i = myNum.length;
+        Mang mang1 = new Mang(i, myNum);
+        mang1.output();
+        mang1.sapXep();
+        mang1.output();
+        Mang mang2 = new Mang(mang);
+        mang2.sapXep();
+        mang2.output();
 
     }
 
