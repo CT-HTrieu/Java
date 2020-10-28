@@ -6,6 +6,11 @@ class Mang {
     private int soPt;
     private int array[];
 
+    Mang() {
+        this.soPt = getsoPt();
+
+    }
+
     public int getsoPt() {
         return soPt;
     }

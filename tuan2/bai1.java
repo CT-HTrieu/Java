@@ -3,7 +3,7 @@ package tuan2;
 import java.util.Scanner;
 
 class HOCSINH {
-    private static final Scanner SCANNER = new Scanner(System.in);
+    private Scanner SCANNER = new Scanner(System.in);
     private String maSo;
     private String hoTen;
     private float dtb;
