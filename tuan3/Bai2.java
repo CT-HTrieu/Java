@@ -89,12 +89,11 @@ class PhanSo {
 }
 
 public class Bai2 {
-    public static void main(String[] args) {
-        Scanner x = new Scanner(System.in);
+    public static void main(String[] args, Scanner scanner) {
         System.out.print("Nhap tu so: ");
-        int tu = x.nextInt();
+        int tu = scanner.nextInt();
         System.out.print("Nhap mau so: ");
-        int mau = x.nextInt();
+        int mau = scanner.nextInt();
         PhanSo ps1 = new PhanSo(tu, mau);
         ps1.rutGon();
         System.out.print("P1 co gia tri la: ");

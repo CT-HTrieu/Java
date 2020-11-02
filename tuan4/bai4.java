@@ -112,7 +112,7 @@ class tamGiac {
 
 public class bai4 {
     public static void main(String[] args) {
-        tamGiac tamgiac = new tamGiac(2, 3, 4);
+        tamGiac tamgiac = new tamGiac(-1, 3, 4);
         tamgiac.show();
         tamgiac.kiemTra();
     }
